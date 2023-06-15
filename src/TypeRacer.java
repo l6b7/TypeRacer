@@ -1,31 +1,40 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class TypeRacer {
 
     private IStopwatch stopwatch;
+    private IWordList wordList;
 
     public static void main(String[] args) {
-       new TypeRacer();
+        new TypeRacer();
     }
 
-    public TypeRacer(){
+    public TypeRacer() {
 
         stopwatch = new Stopwatch();
+        wordList = new WordList(23, 5);
 
 
         System.out.println("Type");
 
         stopwatch.setTimeStamp();
 
-        Scanner scanner = new Scanner(System.in);
-        String input = scanner.nextLine();
+
+        while (!wordList.isEmpty()) {
+            wordList.getBundleOfWords();
+
+            wordList.removeBundleOfWords();
+        }
+
+
+        //Scanner scanner = new Scanner(System.in);
+        //String input = scanner.nextLine();
 
         System.out.println(stopwatch.getElapsedTime());
 
 
-
     }
-
 
 
     // Readwords
@@ -34,8 +43,6 @@ public class TypeRacer {
     // Display information
     // hit 0 to quit
     // else play
-
-
 
 
     //loop // stop if ends or 0 is pressed
@@ -48,7 +55,6 @@ public class TypeRacer {
     // check accuracy // if acc <85% then display words again...
 
     //loop
-
 
 
     // display WPM
