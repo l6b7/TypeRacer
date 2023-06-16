@@ -16,7 +16,6 @@ public class WordList implements IWordList {
     private ArrayList<String> wordList;
 
 
-
     public WordList(int totalAmountOfWords, int bundleSize) {
         this.totalAmountOfWords = totalAmountOfWords;
         this.bundleSize = bundleSize;
@@ -41,15 +40,11 @@ public class WordList implements IWordList {
         }
 
         Collections.shuffle(wordList);
-
-
     }
 
 
     public boolean isEmpty() {
         return wordList.isEmpty();
-
-
     }
 
     public ArrayList<String> getBundleOfWords() {
@@ -73,8 +68,5 @@ public class WordList implements IWordList {
         } else {
             wordList = new ArrayList<>();
         }
-
-
     }
-
 }

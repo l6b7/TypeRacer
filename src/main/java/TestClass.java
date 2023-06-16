@@ -11,6 +11,7 @@ public class TestClass {
     }
 
 
+
     public static void testWordList(int totalAmountOfWords, int bundleSize) {
         WordList wordlist = new WordList(totalAmountOfWords, bundleSize);
 
